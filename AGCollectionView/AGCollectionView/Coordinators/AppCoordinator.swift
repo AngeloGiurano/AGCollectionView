@@ -18,7 +18,7 @@ final class AppCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<CoordinationResult> {
-        let collectionCoordinator = CollectionCoordinator(window: window)
+        let collectionCoordinator = CollectionCoordinator(with: window)
         return coordinate(to: collectionCoordinator)
     }
 }
