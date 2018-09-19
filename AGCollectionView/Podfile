@@ -6,6 +6,13 @@ target 'AGCollectionView' do
   use_frameworks!
 
   # Pods for AGCollectionView
+    ####UI
+    pod 'SnapKit', '~> 4.0'
+    ####REACTIVE
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxCocoa', '~> 4.0'
+    pod 'RxOptional'
+    pod 'RxDataSources'
 
   target 'AGCollectionViewTests' do
     inherit! :search_paths
