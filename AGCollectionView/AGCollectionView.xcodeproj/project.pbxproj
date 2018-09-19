@@ -10,7 +10,7 @@
 		266E100077004FA3DCFEA051 /* Pods_AGCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1D2A685B35FC86BDD56227 /* Pods_AGCollectionView.framework */; };
 		7367CEEA35AC11566B013604 /* Pods_AGCollectionViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313D302795564936961D35DC /* Pods_AGCollectionViewUITests.framework */; };
 		862665842152D00A000D4CF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862665832152D00A000D4CF6 /* AppDelegate.swift */; };
-		862665862152D00A000D4CF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862665852152D00A000D4CF6 /* ViewController.swift */; };
+		862665862152D00A000D4CF6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862665852152D00A000D4CF6 /* CollectionViewController.swift */; };
 		862665892152D00A000D4CF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862665872152D00A000D4CF6 /* Main.storyboard */; };
 		8626658B2152D00B000D4CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8626658A2152D00B000D4CF6 /* Assets.xcassets */; };
 		8626658E2152D00B000D4CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8626658C2152D00B000D4CF6 /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		6241AA6273F6FF8FFF1FBB09 /* Pods_AGCollectionViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGCollectionViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		862665802152D00A000D4CF6 /* AGCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		862665832152D00A000D4CF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		862665852152D00A000D4CF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		862665852152D00A000D4CF6 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		862665882152D00A000D4CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8626658A2152D00B000D4CF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8626658D2152D00B000D4CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				862665832152D00A000D4CF6 /* AppDelegate.swift */,
-				862665852152D00A000D4CF6 /* ViewController.swift */,
+				862665852152D00A000D4CF6 /* CollectionViewController.swift */,
 				862665872152D00A000D4CF6 /* Main.storyboard */,
 				8626658A2152D00B000D4CF6 /* Assets.xcassets */,
 				8626658C2152D00B000D4CF6 /* LaunchScreen.storyboard */,
@@ -385,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				862665862152D00A000D4CF6 /* ViewController.swift in Sources */,
+				862665862152D00A000D4CF6 /* CollectionViewController.swift in Sources */,
 				862665842152D00A000D4CF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +563,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V826A7MRT2;
 				INFOPLIST_FILE = AGCollectionView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelogiurano.AGCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -579,7 +582,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V826A7MRT2;
 				INFOPLIST_FILE = AGCollectionView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelogiurano.AGCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -596,7 +602,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V826A7MRT2;
 				INFOPLIST_FILE = AGCollectionViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelogiurano.AGCollectionViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -614,7 +624,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V826A7MRT2;
 				INFOPLIST_FILE = AGCollectionViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelogiurano.AGCollectionViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -631,7 +645,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V826A7MRT2;
 				INFOPLIST_FILE = AGCollectionViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelogiurano.AGCollectionViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -648,7 +666,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V826A7MRT2;
 				INFOPLIST_FILE = AGCollectionViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.angelogiurano.AGCollectionViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
