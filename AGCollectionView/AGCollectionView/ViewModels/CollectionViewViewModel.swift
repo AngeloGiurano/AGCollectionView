@@ -15,10 +15,14 @@ struct CollectionViewViewModel: ViewModelType {
     
     struct Input {}
     
-    struct Output {}
+    struct Output {
+        var collectionViewDataSource: CollectionViewDataSource
+    }
     
     init() {
         input = Input()
-        output = Output()
+        output = Output(
+            collectionViewDataSource: CollectionViewDataSource()
+        )
     }
 }
