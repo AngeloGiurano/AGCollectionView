@@ -11,17 +11,28 @@ import RxDataSources
 import RxSwift
 import UIKit
 
+
+struct PostViewModel {
+    var uuid = UUID()
+}
+
 enum CardType: IdentifiableType, Equatable {
     
     var identity: String { return UUID().uuidString }
     typealias Identity = String
     
     case initial
-    case post
+    case post(PostViewModel)
     case final
     
     static func ==(lhs: CardType, rhs: CardType) -> Bool {
         switch (lhs, rhs) {
+        case (let .post(viewModel1), let .post(viewModel2)):
+            return viewModel1.uuid == viewModel2.uuid
+        case (.initial, .initial):
+            return true
+        case (.final, .final):
+            return true
         default:
             return false
         }
