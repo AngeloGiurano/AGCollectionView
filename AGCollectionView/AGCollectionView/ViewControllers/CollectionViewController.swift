@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  AGCollectionView
 //
 //  Created by Angelo Giurano on 19/09/2018.
@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
