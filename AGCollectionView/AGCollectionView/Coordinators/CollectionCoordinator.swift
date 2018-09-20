@@ -19,7 +19,8 @@ final class CollectionCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let rootViewController = UIViewController()
+        let rootViewController = CollectionViewController()
+        rootViewController.viewModel = CollectionViewViewModel()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         

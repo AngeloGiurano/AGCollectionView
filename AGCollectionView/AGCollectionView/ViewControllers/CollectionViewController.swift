@@ -8,7 +8,9 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class CollectionViewController: UIViewController, BindableType {
+
+    var viewModel: CollectionViewViewModel!
     
     convenience init() {
         self.init(nibName: nil, bundle: nil)
@@ -16,6 +18,7 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,7 +26,9 @@ final class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func bindViewModel() {
+    }
 
 }
 
