@@ -19,6 +19,7 @@
 		862FD09F21561C37008BD9BD /* ConstraintMakerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862FD09E21561C37008BD9BD /* ConstraintMakerType.swift */; };
 		862FD0A221561EFE008BD9BD /* BaseFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862FD0A121561EFE008BD9BD /* BaseFlowLayout.swift */; };
 		862FD0A421561F48008BD9BD /* CardFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862FD0A321561F48008BD9BD /* CardFlowLayout.swift */; };
+		862FD0A7215639CF008BD9BD /* UIColor+netHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862FD0A6215639CF008BD9BD /* UIColor+netHex.swift */; };
 		869A26F72152DA9C00F15C9D /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A26F62152DA9C00F15C9D /* BaseCoordinator.swift */; };
 		869A26F92152E11900F15C9D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A26F82152E11900F15C9D /* AppCoordinator.swift */; };
 		869A26FB2152E17800F15C9D /* CollectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A26FA2152E17800F15C9D /* CollectionCoordinator.swift */; };
@@ -71,6 +72,7 @@
 		862FD09E21561C37008BD9BD /* ConstraintMakerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMakerType.swift; sourceTree = "<group>"; };
 		862FD0A121561EFE008BD9BD /* BaseFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFlowLayout.swift; sourceTree = "<group>"; };
 		862FD0A321561F48008BD9BD /* CardFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlowLayout.swift; sourceTree = "<group>"; };
+		862FD0A6215639CF008BD9BD /* UIColor+netHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+netHex.swift"; sourceTree = "<group>"; };
 		869A26F62152DA9C00F15C9D /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		869A26F82152E11900F15C9D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		869A26FA2152E17800F15C9D /* CollectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCoordinator.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				862FD09921561A3C008BD9BD /* Cells */,
 				869A26F52152DA8300F15C9D /* Coordinators */,
 				869A270921539C0E00F15C9D /* DataSources */,
+				862FD0A5215639AF008BD9BD /* Extension */,
 				862FD0A021561EE5008BD9BD /* FlowLayout */,
 				869A27022153973100F15C9D /* Protocols */,
 				869A26FF2153970100F15C9D /* ViewModels */,
@@ -182,6 +185,14 @@
 				862FD0A321561F48008BD9BD /* CardFlowLayout.swift */,
 			);
 			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		862FD0A5215639AF008BD9BD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				862FD0A6215639CF008BD9BD /* UIColor+netHex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		869A26F52152DA8300F15C9D /* Coordinators */ = {
@@ -471,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				862FD0A221561EFE008BD9BD /* BaseFlowLayout.swift in Sources */,
+				862FD0A7215639CF008BD9BD /* UIColor+netHex.swift in Sources */,
 				869A27082153987100F15C9D /* BindableType.swift in Sources */,
 				869A26F92152E11900F15C9D /* AppCoordinator.swift in Sources */,
 				869A27012153971500F15C9D /* CollectionViewViewModel.swift in Sources */,

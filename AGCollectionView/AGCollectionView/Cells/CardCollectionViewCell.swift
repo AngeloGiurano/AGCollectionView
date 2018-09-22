@@ -24,6 +24,6 @@ final class CardCollectionViewCell: UICollectionViewCell {
     }
     
     private func drawView() {
-        self.backgroundColor = UIColor(
+        self.backgroundColor = UIColor.red
     }
 }
