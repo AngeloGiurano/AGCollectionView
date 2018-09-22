@@ -13,6 +13,7 @@ final class CollectionViewController: UIViewController, BindableType {
 
     var viewModel: CollectionViewViewModel!
     private var collectionView: UICollectionView!
+    private var progressBar: UIProgressView!
     private let disposeBag = DisposeBag()
     
     convenience init() {
@@ -39,6 +40,13 @@ final class CollectionViewController: UIViewController, BindableType {
             make.right.equalToSuperview().offset(5)
             make.bottom.equalToSuperview()
         }
+        
+        createProgressBar { (make) in
+            make.bottom.equalToSuperview().offset(-42)
+            make.left.equalToSuperview().offset(28)
+            make.right.equalToSuperview().offset(-28)
+            make.height.equalTo(4)
+        }
     }
     
     func bindViewModel() {
@@ -57,7 +65,19 @@ extension CollectionViewController {
         view.addSubview(collectionView)
         collectionView.isPagingEnabled = true
         collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reusableIdentifier)
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.snp.makeConstraints { constraints($0) }
+    }
+    
+    private func createProgressBar(with constraints: ConstraintMakerType) {
+        progressBar = UIProgressView(progressViewStyle: UIProgressViewStyle.bar)
+        view.addSubview(progressBar)
+        progressBar.trackTintColor = UIColor(netHex: 0x595959)
+        progressBar.tintColor = UIColor.white
+        view.addSubview(progressBar)
+        progressBar.layer.cornerRadius = 2
+        progressBar.snp.makeConstraints { constraints($0) }
+        progressBar.setProgress(0.5, animated: true)
     }
 }
 
