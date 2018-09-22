@@ -10,6 +10,10 @@ import UIKit
 
 final class CardCollectionViewCell: UICollectionViewCell {
     
+    static var reusableIdentifier: String {
+        get { return "cardCollectionViewCell" }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.drawView()
@@ -20,6 +24,6 @@ final class CardCollectionViewCell: UICollectionViewCell {
     }
     
     private func drawView() {
-        self.backgroundColor = UIColor.blue
+        self.backgroundColor = UIColor(
     }
 }

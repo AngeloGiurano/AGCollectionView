@@ -62,16 +62,34 @@ struct CollectionViewSection: AnimatableSectionModelType {
 
 final class CollectionViewDataSource: RxCollectionViewSectionedReloadDataSource<CollectionViewSection> {
     
-//    private(set) var cards: Observable<[CardType]>
-//      private(set) var sections: Observable<[CollectionViewSection]>
+    private(set) var cards: Observable<[CardType]>
+    private(set) var sections: Observable<[CollectionViewSection]>
     
     private let _reload: PublishSubject<Void> = PublishSubject()
     private let disposeBag = DisposeBag()
     
-    init() {
+    init(with posts: [PostViewModel]) {
+        
+        cards = Observable.from(optional: posts)
+            .map { posts -> [CardType] in posts.map { CardType.post($0) } }
+            .map { cards -> [CardType] in
+                var newCards = cards
+                newCards.insert(CardType.initial, at: 0)
+                return newCards
+            }
+            .map { cards -> [CardType] in
+                var newCards = cards
+                newCards.append(CardType.final)
+                return newCards
+            }
+            .share(replay: 1, scope: .forever)
+        
+        sections = cards.map { [CollectionViewSection(header: "", items: $0)]}
+        
         // Set cell
         let configureCell : ConfigureCell = { (dataSource, collection, indexPath, model) -> UICollectionViewCell in
-            return UICollectionViewCell()
+            let cell = collection.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.reusableIdentifier, for: indexPath)
+            return cell
         }
         
         super.init(
