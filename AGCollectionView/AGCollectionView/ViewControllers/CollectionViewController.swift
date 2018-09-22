@@ -34,7 +34,10 @@ final class CollectionViewController: UIViewController, BindableType {
     
     private func drawView() {
         createCollectionView { (make) in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview()
+            make.left.equalToSuperview().offset(-5)
+            make.right.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview()
         }
     }
     

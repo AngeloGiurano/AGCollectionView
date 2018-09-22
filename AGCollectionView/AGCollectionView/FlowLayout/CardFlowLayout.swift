@@ -11,9 +11,9 @@ import UIKit
 final class CardFlowLayout: BaseFlowLayout {
     override func setupFlowLayout() {
         scrollDirection = .horizontal
-        sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        minimumInteritemSpacing = 20
-        minimumLineSpacing = 20
-        itemSize = CGSize(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height)
+        sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        minimumInteritemSpacing = 10
+        minimumLineSpacing = 10
+        itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
 }
