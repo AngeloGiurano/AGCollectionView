@@ -11,6 +11,7 @@ import UIKit
 final class CollectionViewController: UIViewController, BindableType {
 
     var viewModel: CollectionViewViewModel!
+    private var collectionView: UICollectionView!
     
     convenience init() {
         self.init(nibName: nil, bundle: nil)
@@ -18,6 +19,7 @@ final class CollectionViewController: UIViewController, BindableType {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        drawView()
         bindViewModel()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -27,8 +29,22 @@ final class CollectionViewController: UIViewController, BindableType {
         // Dispose of any resources that can be recreated.
     }
     
+    private func drawView() {
+        createCollectionView { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    
     func bindViewModel() {
     }
 
+}
+
+extension CollectionViewController {
+    private func createCollectionView(with constraints: ConstraintMakerType) {
+        collectionView = UICollectionView(frame: view.frame)
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { constraints($0) }
+    }
 }
 
