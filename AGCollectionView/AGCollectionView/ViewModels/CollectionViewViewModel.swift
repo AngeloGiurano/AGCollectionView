@@ -21,8 +21,10 @@ struct CollectionViewViewModel: ViewModelType {
     
     init() {
         input = Input()
+        
+        let posts = [PostViewModel(), PostViewModel(), PostViewModel(), PostViewModel()]
         output = Output(
-            collectionViewDataSource: CollectionViewDataSource()
+            collectionViewDataSource: CollectionViewDataSource(with: posts)
         )
     }
 }
